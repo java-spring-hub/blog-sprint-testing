@@ -20,9 +20,9 @@ public class JaxRsApplication extends Application {
     public Set<Object> getSingletons() {
         try {
 
-            springContext = new AnnotationConfigApplicationContext("org.grumpy.blog.justme", "blog.spring.jaxrs");
+            springContext = new AnnotationConfigApplicationContext("blog.spring.justme", "blog.spring.jaxrs");
 
-            return ImmutableSet.of(springContext.getBean("jaxRcController"));
+            return ImmutableSet.of(springContext.getBean("jaxRsController"));
 
         } catch (Exception ex) {
             throw new RuntimeException(ex);

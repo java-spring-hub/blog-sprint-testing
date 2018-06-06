@@ -6,12 +6,11 @@ import blog.spring.notme.Dependency;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import javax.inject.Inject;
 
 import static org.junit.internal.matchers.StringContains.containsString;
 import static org.mockito.Mockito.when;
@@ -28,10 +27,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         })
 public class SomeControllerPickBeanITTest {
 
-    @Inject
+    @Autowired
     private Dependency dependency;
 
-    @Inject
+    @Autowired
     private SomeController someController;
 
     private MockMvc mvc;

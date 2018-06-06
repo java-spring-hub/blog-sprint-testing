@@ -26,7 +26,7 @@ import static org.mockito.Mockito.when;
 public class JaxRsControllerITTest {
 
     private int port = 8282;
-    private String baseUrl = "http://localhost";
+    private String baseUrl = "http://localhost/";
     private HttpServer server;
     private Dependency dependency;
 
@@ -74,7 +74,9 @@ public class JaxRsControllerITTest {
     private HttpResponse executeRequest(String id) throws IOException {
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
-        HttpGet httpGet = new HttpGet(baseUrl + ":" + port + id);
+        URI uri = UriBuilder.fromUri(baseUrl).port(port).path(id).build();
+
+        HttpGet httpGet = new HttpGet(uri);
 
         return httpclient.execute(httpGet);
     }

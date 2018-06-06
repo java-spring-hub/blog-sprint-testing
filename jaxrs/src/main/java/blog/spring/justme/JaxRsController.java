@@ -1,6 +1,6 @@
 package blog.spring.justme;
 
-import blog.spring.justme.SomeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -10,11 +10,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 @Path("/item")
-@Component
 public class JaxRsController {
 
-    @Inject
-    SomeService someService;
+    @Autowired
+    private SomeService someService;
 
     @Path("{id}")
     @GET

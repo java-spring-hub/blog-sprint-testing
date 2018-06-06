@@ -17,12 +17,12 @@ public class JaxRsSpringContextITTest {
         ApplicationContext springContext = new AnnotationConfigApplicationContext("blog.spring.justme", "blog.spring.jaxrs");
 
         Dependency dependency = springContext.getBean(Dependency.class);
-        JaxRsController jaxRcController =  (JaxRsController) springContext.getBean("jaxRcController");
+        JaxRsController jaxRsController =  (JaxRsController) springContext.getBean("jaxRsController");
         String id = "id";
         String description = "description";
         when(dependency.getItemDescription(id)).thenReturn(description);
 
-        assertThat(jaxRcController.getItemDescription(id), is(description));
+        assertThat(jaxRsController.getItemDescription(id), is(description));
     }
 
 }
