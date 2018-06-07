@@ -21,7 +21,7 @@ initialization is slow.
  - `JaxRsControllerITTest` - starting web server with a JAX-RS REST controller registered
 
 ## Run tests
-Go to the examples based directory and execute `mvn test`
+Go to the examples base directory and execute `mvn test`
 
 ## Requirements
 * Maven 2+
