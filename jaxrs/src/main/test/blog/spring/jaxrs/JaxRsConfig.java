@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Configuration;
 
 import static org.mockito.Mockito.mock;
 
+/**
+ * Configuration bean for JAX-RS tests. It sets up Dependency mock on Spring context to be used on tests.
+ */
 @Configuration
 public class JaxRsConfig {
 
@@ -15,7 +18,4 @@ public class JaxRsConfig {
     public Dependency dependency() {
         return mock(Dependency.class);
     }
-
-    @Bean
-    public JaxRsController jaxRsController() { return new JaxRsController();}
 }

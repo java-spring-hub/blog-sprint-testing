@@ -7,6 +7,11 @@ import org.springframework.context.annotation.Configuration;
 
 import static org.mockito.Mockito.mock;
 
+/**
+ * Configuration bean required to setup Dependency mock.
+ *
+ * Uses {@code ComponentScan} to include directory 'blog.spring.justme' on Spring context.
+ */
 @Configuration
 @ComponentScan("blog.spring.justme")
 public class SomeConfigPackageScan {

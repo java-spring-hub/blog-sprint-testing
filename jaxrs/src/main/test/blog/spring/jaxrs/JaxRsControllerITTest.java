@@ -23,6 +23,10 @@ import static org.junit.Assert.assertThat;
 import static org.junit.internal.matchers.StringContains.containsString;
 import static org.mockito.Mockito.when;
 
+/**
+ * Test example starting a Web Server (glassfish) with {@code JaxRsApplication} registered and {@code JaxRsController}
+ * accessible for HTTP calls.
+ */
 public class JaxRsControllerITTest {
 
     private int port = 8282;
@@ -31,6 +35,10 @@ public class JaxRsControllerITTest {
     private Dependency dependency;
 
 
+    /**
+     * Sends HTTP GET request to server and asserts if response matches the expected values set for {@code Dependency}
+     * mock
+     */
     @Test
     public void testJaxRsStartingServer() throws Exception {
         String id = "id";

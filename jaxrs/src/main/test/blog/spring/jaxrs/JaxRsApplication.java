@@ -10,6 +10,12 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.Context;
 import java.util.Set;
 
+/**
+ * Supporting code for tests  - Starts a JAX-RS application. Spring context is started manually, using
+ * {@code AnnotationConfigApplicationContext}. This annotation enables Spring annotation-based
+ * configuration. All annotated Spring beans contained in packages 'blog.spring.justme' and
+ * 'blog.spring.jaxrs' are included in the Spring context.
+ */
 @ApplicationPath("rs")
 public class JaxRsApplication extends Application {
     protected ApplicationContext springContext;

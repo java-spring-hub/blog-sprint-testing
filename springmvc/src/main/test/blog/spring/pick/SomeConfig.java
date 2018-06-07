@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Configuration;
 
 import static org.mockito.Mockito.mock;
 
+/**
+ * Configuration bean required to setup Dependency mock.
+ */
 @Configuration
 public class SomeConfig {
 
